@@ -18,7 +18,6 @@ app.get('/', (req, res) => res.send('Hello Lyft Recuiter!'))
 app.post('/test',  (req, res, next) => {
     try {
         let request = req.body.string_to_cut
-        console.log(typeof(request))
         if(typeof(request) === "string"){
              res.json({"return_string":everyThird(request)})
         }
